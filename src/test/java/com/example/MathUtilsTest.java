@@ -10,23 +10,33 @@ class MathUtilsTest {
     @Test
     @DisplayName("Substract of one minor two")
     void testSubtract() {
+        //Givent
         int a = 1;
         int b = 2;
-        int expected = MathUtils.subtract(a, b);
-        assertEquals(expected, MathUtils.subtract(a, b));
+        int expected = -1;
+
+        //When
+        int actual = MathUtils.subtract(a, b);
+
+        //Then
+        assertEquals(expected, actual);
     }
 
     @Test
     void testIsPositive() {
         int a = 1;
         boolean expected = true;
-        assertEquals(expected, MathUtils.isPositive(a));
+
+        boolean actual = MathUtils.isPositive(a);
+
+        assertEquals(expected, actual);
     }
 
     @Test
     void testSquare() {
         int n = 10;
-        int expected = MathUtils.square(n);
-        assertEquals(expected, MathUtils.square(n));
+        int expected = 100;
+        int actual = MathUtils.square(n);
+        assertEquals(expected, actual);
     }
 }
